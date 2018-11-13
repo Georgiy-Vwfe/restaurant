@@ -13,7 +13,7 @@
         <!--Заказ-->
         <scene sceneID="8ez-LD-dF0">
             <objects>
-                <tableViewController id="AKH-Nn-7el" sceneMemberID="viewController">
+                <tableViewController id="AKH-Nn-7el" customClass="OrderTableViewController" customModule="restaurant" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="P8n-Ln-wnk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -59,7 +59,7 @@
         <!--Меню-->
         <scene sceneID="6zz-Se-wSM">
             <objects>
-                <tableViewController id="0YE-KO-wbv" sceneMemberID="viewController">
+                <tableViewController id="0YE-KO-wbv" customClass="CategoryTableViewController" customModule="restaurant" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="D0H-9J-Ed2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -88,10 +88,10 @@
             </objects>
             <point key="canvasLocation" x="1367" y="-421"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Menu Table View Controller-->
         <scene sceneID="eS1-pu-EAu">
             <objects>
-                <tableViewController id="beG-Fn-uYP" sceneMemberID="viewController">
+                <tableViewController id="beG-Fn-uYP" customClass="MenuTableViewController" customModule="restaurant" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="WQD-7n-XhW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -119,10 +119,10 @@
             </objects>
             <point key="canvasLocation" x="2142" y="-421"/>
         </scene>
-        <!--View Controller-->
+        <!--Menu Item Detail View Controller-->
         <scene sceneID="OLX-UK-WX9">
             <objects>
-                <viewController id="6lV-ti-Bua" sceneMemberID="viewController">
+                <viewController id="6lV-ti-Bua" customClass="MenuItemDetailViewController" customModule="restaurant" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zUe-uj-My0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
