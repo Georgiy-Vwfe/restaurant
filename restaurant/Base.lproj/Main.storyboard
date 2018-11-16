@@ -43,7 +43,7 @@
         <scene sceneID="foD-Ob-OSB">
             <objects>
                 <navigationController id="gZ6-o7-ElO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Заказ" image=" ф" id="G5t-Be-CET"/>
+                    <tabBarItem key="tabBarItem" title="Заказ" image="bank_cards" id="G5t-Be-CET"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pCu-p3-8Nx">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -65,7 +65,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Dqz-db-2Pd">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCellIdentifier" id="Dqz-db-2Pd">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Dqz-db-2Pd" id="4I9-dC-8T9">
@@ -73,7 +73,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="beG-Fn-uYP" kind="show" id="h9t-P6-Gcb"/>
+                                    <segue destination="beG-Fn-uYP" kind="show" identifier="MenuSegue" id="h9t-P6-Gcb"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -97,7 +97,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="dIc-j2-joS">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MenuCellIdentifier" id="dIc-j2-joS">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dIc-j2-joS" id="rSm-8v-YqJ">
@@ -171,7 +171,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name=" ф" width="16" height="16"/>
+        <image name="bank_cards" width="30" height="30"/>
         <image name="shop" width="30" height="30"/>
     </resources>
 </document>

@@ -9,9 +9,22 @@
 import UIKit
 
 class MenuTableViewController: UITableViewController {
-
+    var menuItems = [MenuItem]()
+    let menuController = MenuController()
+    var category: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.title = category.capitalized
+        
+        menuController.fetchMenuItems(forCategory: category) { menuItems in
+            guard let menuItems = menuItems else { return }
+            self.menuItems = menuItems
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -22,25 +35,21 @@ class MenuTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return menuItems.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MenuCellIdentifier", for: indexPath)
+        let menuItem = menuItems[indexPath.row]
+        
+        cell.textLabel?.text = menuItem.name
+        cell.detailTextLabel?.text = "$\(menuItem.price)"
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
