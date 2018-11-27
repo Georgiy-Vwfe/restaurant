@@ -18,10 +18,10 @@ class MenuItemDetailViewController: UIViewController {
     
     var menuItem: MenuItem! = MenuItem(
     id: 0,
-    name: "text `fahjdfvhjk`dsfas`vfhjkcdv`jshvcfhjasvcjhv`aschbadjsgfhjsdafvjkh`asvfljchb",
-    detailText: "TEXT ;SKJG;SDJGFLJSDZHFHGDSKLJF';SAEJ;DGHZKLJFHKJDSHFKLJSZDH",
+    name: "name",
+    detailText: "detailText",
     price: 9.99,
-    category: "HGIUHSD",
+    category: "category",
     imageURL: URL(string: "https://apple.com")!
     )
     
@@ -37,7 +37,12 @@ class MenuItemDetailViewController: UIViewController {
         titleLabel.text = menuItem.name
         priceLabel.text = String(format: "$%.2f", menuItem.price)
         detailTextLabel.text = menuItem.detailText
-        
+        MenuController.shared.fetchImage(url: menuItem.imageURL) { (image) in
+            guard let image = image else { return }
+            DispatchQueue.main.async {
+                self.imageView.image = image
+            }
+        }
     }
 
     @IBAction func orderButtonTapped(_ sender: UIButton) {
@@ -45,7 +50,9 @@ class MenuItemDetailViewController: UIViewController {
             sender.transform = CGAffineTransform(scaleX: 3, y: 3)
             sender.transform = CGAffineTransform(scaleX: 1, y: 1)
         }
+        MenuController.shared.order.menuItems.append(menuItem)
     }
+    
     /*
     // MARK: - Navigation
 

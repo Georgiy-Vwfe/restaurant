@@ -17,6 +17,7 @@
 		3F7A6293219AC3B600714CB6 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7A6292219AC3B600714CB6 /* MenuItem.swift */; };
 		3F7A6295219ACCC100714CB6 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7A6294219ACCC100714CB6 /* MenuController.swift */; };
 		3FA921AA21A814AB005D89C0 /* MenuItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA921A921A814AB005D89C0 /* MenuItemDetailViewController.swift */; };
+		3FE68FBA21AD34FC006E1D67 /* OrderConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE68FB921AD34FC006E1D67 /* OrderConfirmationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		3F7A6292219AC3B600714CB6 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		3F7A6294219ACCC100714CB6 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		3FA921A921A814AB005D89C0 /* MenuItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemDetailViewController.swift; sourceTree = "<group>"; };
+		3FE68FB921AD34FC006E1D67 /* OrderConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderConfirmationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				3F7A6289219AC11500714CB6 /* CategoryTableViewController.swift */,
 				3F7A628B219AC12500714CB6 /* MenuTableViewController.swift */,
 				3F7A628D219AC13700714CB6 /* OrderTableViewController.swift */,
+				3FE68FB921AD34FC006E1D67 /* OrderConfirmationViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 				3F7A628E219AC13700714CB6 /* OrderTableViewController.swift in Sources */,
 				3F7A6278219AB00800714CB6 /* AppDelegate.swift in Sources */,
 				3FA921AA21A814AB005D89C0 /* MenuItemDetailViewController.swift in Sources */,
+				3FE68FBA21AD34FC006E1D67 /* OrderConfirmationViewController.swift in Sources */,
 				3F7A6293219AC3B600714CB6 /* MenuItem.swift in Sources */,
 				3F7A628A219AC11500714CB6 /* CategoryTableViewController.swift in Sources */,
 				3F7A628C219AC12500714CB6 /* MenuTableViewController.swift in Sources */,
