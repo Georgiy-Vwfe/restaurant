@@ -35,7 +35,7 @@ class MenuItemDetailViewController: UIViewController {
     
     func updateUI() {
         titleLabel.text = menuItem.name
-        priceLabel.text = String(format: "$%.2f", menuItem.price)
+        priceLabel.text = "₽\(Int(menuItem.price))"
         detailTextLabel.text = menuItem.detailText
         MenuController.shared.fetchImage(url: menuItem.imageURL) { (image) in
             guard let image = image else { return }

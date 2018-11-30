@@ -50,7 +50,7 @@ class MenuTableViewController: UITableViewController {
     func configure(cell: UITableViewCell, forItemAt indexPath: IndexPath) {
         let menuItem = menuItems[indexPath.row]
         cell.textLabel?.text = menuItem.name
-        cell.detailTextLabel?.text = String(format: "$%.2f", menuItem.price)
+        cell.detailTextLabel?.text = "₽\(Int(menuItem.price))"
         MenuController.shared.fetchImage(url: menuItem.imageURL) { (image) in
             guard let image = image else { return }
             DispatchQueue.main.async {

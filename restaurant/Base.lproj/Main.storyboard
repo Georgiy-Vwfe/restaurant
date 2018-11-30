@@ -64,7 +64,7 @@
             </objects>
             <point key="canvasLocation" x="1367" y="283"/>
         </scene>
-        <!--Your Order-->
+        <!--Ваш заказ-->
         <scene sceneID="ZBc-G3-2Nb">
             <objects>
                 <viewController id="mit-Zi-kUd" customClass="OrderConfirmationViewController" customModule="restaurant" customModuleProvider="target" sceneMemberID="viewController">
@@ -73,12 +73,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZv-aZ-MLr">
-                                <rect key="frame" x="157.5" y="317" width="60" height="33"/>
+                                <rect key="frame" x="147.5" y="317" width="80" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="CtE-VV-oC7"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Dismiss"/>
+                                <state key="normal" title="Отменить"/>
                                 <connections>
                                     <segue destination="sYw-yZ-ZKO" kind="unwind" identifier="DismissConfirmation" unwindAction="unwindToCategoryListWithSegue:" id="oLE-HP-NBc"/>
                                 </connections>
@@ -100,7 +100,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sPw-7G-R27"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Your Order" id="bWk-4o-KjN"/>
+                    <navigationItem key="navigationItem" title="Ваш заказ" id="bWk-4o-KjN"/>
                     <connections>
                         <outlet property="timeRemainingLabel" destination="NXP-ce-IIp" id="UlR-a4-4Cp"/>
                     </connections>
@@ -218,7 +218,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shop" translatesAutoresizingMaskIntoConstraints="NO" id="XWz-Rd-LWB">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shop" translatesAutoresizingMaskIntoConstraints="NO" id="XWz-Rd-LWB">
                                 <rect key="frame" x="16" y="80" width="343" height="126"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5OT-7r-ABl">
@@ -228,7 +228,7 @@
                                     <constraint firstAttribute="height" constant="36" id="1k3-U7-QIb"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Add To Order">
+                                <state key="normal" title="Добавить в корзину">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>

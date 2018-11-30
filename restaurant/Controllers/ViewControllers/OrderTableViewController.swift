@@ -18,13 +18,13 @@ class OrderTableViewController: UITableViewController {
         { (result, menuItem) -> Double in
             return result + menuItem.price
         }
-        let formattedOrder = String(format: "$%.2f", orderTotal)
+        let formattedOrder = "₽\(Int(orderTotal))"
         
-        let alert = UIAlertController(title: "Confirm Order", message: "You are about to submit your order with a total of \(formattedOrder)", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Submit", style: .default) { action in
+        let alert = UIAlertController(title: "Подтвердите заказ", message: "Вы собираетесь заказать еду на \(formattedOrder)", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Подтвердить", style: .default) { action in
             self.uploadOrder()
         })
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Отменить", style: .cancel, handler: nil))
         present(alert, animated: true, completion: nil)
     }
     
@@ -66,7 +66,7 @@ class OrderTableViewController: UITableViewController {
     func configure(_ cell: UITableViewCell, forItemAt indexPath: IndexPath) {
         let menuItem = MenuController.shared.order.menuItems[indexPath.row]
         cell.textLabel?.text = menuItem.name
-        cell.detailTextLabel?.text = String(format: "$%.2f", menuItem.price)
+        cell.detailTextLabel?.text = "₽\(Int(menuItem.price))"
     }
     
 
