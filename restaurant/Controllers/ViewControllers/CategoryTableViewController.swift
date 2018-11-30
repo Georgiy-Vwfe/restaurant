@@ -54,6 +54,12 @@ class CategoryTableViewController: UITableViewController {
         return 100
     }
     
+    @IBAction func unwindToCategoryList(segue: UIStoryboardSegue){
+        if segue.identifier == "DismissConfirmation" {
+            MenuController.shared.order.menuItems.removeAll()
+        }
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

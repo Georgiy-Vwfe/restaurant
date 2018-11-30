@@ -19,11 +19,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="OrderCellIdentifier" textLabel="O1R-R0-GDM" detailTextLabel="dkr-ue-7uD" style="IBUITableViewCellStyleValue1" id="owG-QT-Aac">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OrderCellIdentifier" textLabel="O1R-R0-GDM" detailTextLabel="dkr-ue-7uD" style="IBUITableViewCellStyleValue1" id="owG-QT-Aac">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="owG-QT-Aac" id="c8F-mS-aSm">
-                                    <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="O1R-R0-GDM">
@@ -34,7 +34,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dkr-ue-7uD">
-                                            <rect key="frame" x="296" y="12" width="44" height="20.5"/>
+                                            <rect key="frame" x="315" y="12" width="44" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -42,9 +42,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="mit-Zi-kUd" kind="show" identifier="ConfirmationSegue" id="R6b-Kp-fg2"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -52,7 +49,16 @@
                             <outlet property="delegate" destination="AKH-Nn-7el" id="Qlu-mm-vea"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Заказ" id="pcL-2v-h12"/>
+                    <navigationItem key="navigationItem" title="Заказ" id="pcL-2v-h12">
+                        <barButtonItem key="rightBarButtonItem" title="Submit" id="mhb-Bk-t5t">
+                            <connections>
+                                <action selector="submitTapped:" destination="AKH-Nn-7el" id="969-gs-dig"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="mit-Zi-kUd" kind="show" identifier="ConfirmationSegue" id="v3N-5r-9Wf"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fQg-qi-MAK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -74,7 +80,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Dismiss"/>
                                 <connections>
-                                    <segue destination="sYw-yZ-ZKO" kind="unwind" identifier="DismissConfirmation" unwindAction="unwindToOrderListWithSegue:" id="4nj-Fz-5kq"/>
+                                    <segue destination="sYw-yZ-ZKO" kind="unwind" identifier="DismissConfirmation" unwindAction="unwindToCategoryListWithSegue:" id="oLE-HP-NBc"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NXP-ce-IIp">
@@ -94,13 +100,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sPw-7G-R27"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Your Order" id="bWk-4o-KjN">
-                        <barButtonItem key="rightBarButtonItem" title="Submit" id="mhb-Bk-t5t">
-                            <connections>
-                                <action selector="submitTapped:" destination="mit-Zi-kUd" id="7O9-jp-09O"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Your Order" id="bWk-4o-KjN"/>
                     <connections>
                         <outlet property="timeRemainingLabel" destination="NXP-ce-IIp" id="UlR-a4-4Cp"/>
                     </connections>
@@ -157,7 +157,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ei9-gW-6oJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1367" y="-421"/>
+            <point key="canvasLocation" x="2266" y="-484"/>
         </scene>
         <!--Menu Table View Controller-->
         <scene sceneID="eS1-pu-EAu">
@@ -208,7 +208,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VC0-Nf-46A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2141.5999999999999" y="-421.43928035982015"/>
+            <point key="canvasLocation" x="3042" y="-484"/>
         </scene>
         <!--Menu Item Detail View Controller-->
         <scene sceneID="OLX-UK-WX9">
@@ -284,7 +284,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B1U-YK-L4B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2932" y="-421.43928035982015"/>
+            <point key="canvasLocation" x="3833" y="-484"/>
         </scene>
         <!--Меню-->
         <scene sceneID="YhQ-rB-CeE">
@@ -301,7 +301,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Quf-p8-wV7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="457" y="-421"/>
+            <point key="canvasLocation" x="1366" y="-483"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="haf-iJ-GTT">
@@ -319,7 +319,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VRu-mc-h8N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-495" y="-50"/>
+            <point key="canvasLocation" x="457" y="-482"/>
         </scene>
     </scenes>
     <resources>
